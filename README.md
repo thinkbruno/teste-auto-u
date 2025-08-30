@@ -70,4 +70,4 @@ Layout responsivo simples.
 ## 🔮 Melhorias futuras
 Persistência dos dados em banco de dados (SQLite/Postgres).
 Autenticação de usuários.
-Deploy em Fly.io ou Render.
+
