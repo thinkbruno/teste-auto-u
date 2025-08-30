@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Classificador de emails - teste AutoU</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Classificador de emails - teste AutoU</h1>
+    <div class="container">
+        <form method="POST">
+            <label for="email_text"><b>Liste de emails:</b></label><br>
+            <textarea name="email_text" required>{{ email_text if email_text else "" }}</textarea><br>
+            <button type="submit">Classificar</button>
+        </form>
+
+        {% if categoria %}
+        <div class="result">
+            <p><b>Categoria:</b> {{ categoria }}</p>
+            <p><b>Resposta sugerida:</b> {{ resposta }}</p>
+        </div>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
